@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Padua Portfolio - IT Company Documentation
 
-## Getting Started
+![Padua Portfolio](public/images/Logo/DP-LOGO.png)
 
-First, run the development server:
+## 📖 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The **Padua Portfolio** is a premium, high-performance web application designed for Team Padua Client Servicing. It serves as both a professional showcase of achievements and a functional portal for Sun Life Financial Advisors to request custom Client Policy Cards. 
+
+Built with modern web technologies, the platform prioritizes **aesthetic excellence, smooth micro-interactions, and 3D rendering capabilities**, ensuring a world-class user experience.
+
+---
+
+## 🏗 Architecture & Folder Structure
+
+This project follows a strict, modular architecture designed for scalability and maintainability, adhering to modern Next.js App Router conventions.
+
+```text
+padua-portfolio/
+├── app/                  # Next.js App Router root (Pages, Layouts, global CSS)
+├── components/           # Reusable UI components (Buttons, Inputs, 3D Canvas, Forms)
+├── sections/             # Large page sections (Hero, About, Achievements, Portfolio)
+├── lib/                  # Utility functions and shared constants
+├── hooks/                # Custom React hooks
+├── public/               # Static assets (Images, Videos, Fonts)
+├── types/                # TypeScript type definitions
+└── ...config files       # Tailwind, PostCSS, ESLint, TypeScript configs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Architectural Decisions:
+- **Separation of Concerns:** Complex pages are broken down into logical `sections/` (e.g., `Achievements.tsx`, `CPCRequest.tsx`), which are then assembled in `app/page.tsx`.
+- **Component Reusability:** Micro-components (like `Container.tsx` or `FloatingField.tsx`) are isolated in the `components/` directory to ensure consistent styling across the application.
+- **Client vs. Server Components:** By default, Next.js uses Server Components for performance. Highly interactive components (like Framer Motion animations and Three.js canvases) are explicitly marked with `"use client"`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Tech Stack
 
-## Learn More
+| Category | Technology |
+| :--- | :--- |
+| **Framework** | [Next.js (App Router)](https://nextjs.org/) |
+| **Library** | [React](https://reactjs.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Animation** | [Framer Motion](https://www.framer.com/motion/) |
+| **3D Rendering** | [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/) & Drei |
+| **Form Handling** | [React Hook Form](https://react-hook-form.com/) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Core Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Interactive 3D Client Policy Card Stage (`CPCStage.tsx`)**
+  - Uses WebGL and Three.js to render a fully interactive, rotatable 3D model of the requested policy card.
+  - Supports dynamic theme switching (Original, Classic White, Executive Black).
+- **Premium Loading Sequence (`LoadingScreen.tsx`)**
+  - A sophisticated sequence utilizing Framer Motion to ensure assets are loaded while providing an Apple-like cinematic intro.
+- **Dynamic Galleries (`Achievements.tsx` & `Portfolio.tsx`)**
+  - Highly responsive masonry and grid layouts.
+  - Features ambient cursor-following glow effects and fullscreen immersive media modals.
+- **Client Policy Card Request Portal (`RequestForm.tsx`)**
+  - A robust, multi-step form architecture with client-side validation and file upload capabilities.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Prerequisites
+- Node.js (v18.17 or later)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. **Clone the repository** (if applicable) or navigate to the project directory:
+   ```bash
+   cd padua-portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the application:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🛠 Development Guidelines
+
+- **Styling:** Use Tailwind utility classes. For complex gradients or brand-specific colors (e.g., Gold), utilize CSS variables defined in `globals.css` (e.g., `var(--color-gold)`).
+- **Animations:** Do not use heavy JS intervals. Rely exclusively on `framer-motion` for complex sequences or Tailwind's `transition` utilities for simple hover states.
+- **3D Assets:** All Three.js logic should be self-contained within `components/CPCStage.tsx` and its child components to prevent polluting standard React UI logic.
+
+---
+
+*Documentation auto-generated and maintained by the engineering team.*
