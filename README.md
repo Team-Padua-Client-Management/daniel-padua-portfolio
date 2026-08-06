@@ -1,4 +1,4 @@
-# Padua Portfolio - IT Company Documentation
+# Padua Portfolio -  Documentation
 
 ![Padua Portfolio](public/images/Logo/DP-LOGO.png)
 
