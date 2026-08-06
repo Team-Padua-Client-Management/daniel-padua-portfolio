@@ -38,26 +38,26 @@ const galleryItems = [
     id: 1,
     title: "TOP 1 ROOKIE - AUGUST ",
     type: "image",
-    media: "/images/achievements/top1-rookie.jpg"
+    media: "/images/Achievements/top1-rookie.jpg"
   },
   {
     id: 2,
     title: "TOP 1 ROOKIE -Summer Campaign",
     type: "image",
-    media: "/images/achievements/top-rookie.jpg"
+    media: "/images/Achievements/top-rookie.jpg"
   },
   {
     id: 3,
     title: "TOP 1 JACK MA OF ALIBABA UNIT",
     type: "image",
-    media: "/images/achievements/Top1.jpg"
+    media: "/images/Achievements/Top1.jpg"
   },
   {
     id: 4,
     title: "TOP 1 JACK MA OF ALIBABA UNIT",
     type: "image",
 
-    media: "/images/achievements/Top1.2.jpg"
+    media: "/images/Achievements/top1.2.jpg"
   }
 ];
 

@@ -93,6 +93,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Global smooth transition for responsive layout adjustments */
+h1, h2, h3, h4, p, span, div, section, footer, header, img {
+  transition-property: padding, margin, width, max-width, font-size, gap, flex-direction, grid-template-columns;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
 /* Selection highlight */
 ::selection {
   background-color: var(--color-gold);

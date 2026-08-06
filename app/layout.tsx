@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sir Daniel Padua — Professional Portfolio",
+  title: "Daniel Padua Portfolio",
   description:
     "Professional Client Servicing & Digital Creative Services by Sir Daniel Padua. Elevating brands through strategy, design, and technology.",
   keywords: [
